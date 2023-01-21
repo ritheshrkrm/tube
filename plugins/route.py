@@ -9,4 +9,4 @@ async def bot_run():
   
   @routes.get("/", allow_head=True)
 async def root_route_handler(request):
-    return webserver.json_response("Mo_Tech_YT")
+    return webserver.json_response("KWIC_BOT_UPDATES")
