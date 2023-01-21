@@ -16,6 +16,17 @@ else:
     from config import Config
     from config import LOGGER
 
+from
+from os import environ
+from aiohttp import web as webserver
+
+PORT_CODE = environ.get("PORT", "8080")
+
+
+
+
+
+
 
 class Bot(Client):
     def __init__(self):
@@ -36,6 +47,11 @@ class Bot(Client):
         self.set_parse_mode("html")
         self.LOGGER(__name__).info(
             f"@{me.username}  started! "
+           
+        client = webserver.AppRunner(await bot_run())
+        await client.setup()
+        bind_address = "0.0.0.0"
+        await webserver.TCPSite(client, bind_address, PORT_CODE).start()
         )
 
     async def stop(self, *args):
