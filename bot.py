@@ -16,7 +16,7 @@ else:
     from config import Config
     from config import LOGGER
 
-from
+from plugins.route import bot_run
 from os import environ
 from aiohttp import web as webserver
 
