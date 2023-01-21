@@ -45,9 +45,7 @@ class Bot(Client):
         await super().start()
         me = await self.get_me()
         self.set_parse_mode("html")
-        self.LOGGER(__name__).info(
-            f"@{me.username}  started! "
-           
+        self.LOGGER(__name__).info(f"@{me.username}  started!")  
         app = web.AppRunner(await web_server()) 
         await client.setup()
         bind_address = "0.0.0.0"
