@@ -48,7 +48,7 @@ class Bot(Client):
         self.LOGGER(__name__).info(
             f"@{me.username}  started! "
            
-        client = webserver.AppRunner(await bot_run())
+        app = web.AppRunner(await web_server())
         await client.setup()
         bind_address = "0.0.0.0"
         await webserver.TCPSite(client, bind_address, PORT_CODE).start()
