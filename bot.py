@@ -15,10 +15,11 @@ if bool(os.environ.get("ENV", False)):
 else:
     from config import Config
     from config import LOGGER
-
-from plugins.route import bot_run
 from os import environ
 from aiohttp import web as webserver
+import pytz
+from aiohttp import web
+from plugins import web_server
 
 PORT_CODE = environ.get("PORT", "8080")
 
