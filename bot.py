@@ -48,11 +48,11 @@ class Bot(Client):
         self.LOGGER(__name__).info(
             f"@{me.username}  started! "
            
-        app = web.AppRunner(await web_server()
+        app = web.AppRunner(await web_server()) 
         await client.setup()
         bind_address = "0.0.0.0"
         await webserver.TCPSite(client, bind_address, PORT_CODE).start()
-        )
+  
 
     async def stop(self, *args):
         await super().stop()
